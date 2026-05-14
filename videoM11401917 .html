@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>炒飯的科學與藝術 - 主題探索報告</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#D4AF37',
+                        wok: '#1a1a1a',
+                        fire: '#FF4500',
+                        rice: '#FDF5E6',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'sans-serif'],
+                        display: ['Outfit', 'Noto Sans TC', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0c0c0c;
+            color: #e5e7eb;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #FFD700 0%, #FF4500 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #1a1a1a;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+            border-radius: 10px;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+        @media (max-width: 1024px) {
+            .bento-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 640px) {
+            .bento-grid { grid-template-columns: 1fr; }
+        }
+        .media-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+        video, img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 30px rgba(255, 69, 0, 0.2);
+            border-color: rgba(255, 69, 0, 0.4);
+            transition: all 0.4s ease;
+        }
+    </style>
+</head>
+<body class="custom-scrollbar font-sans leading-relaxed">
+
+    <!-- Header Section -->
+    <header class="relative pt-16 pb-10 px-6 overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full opacity-10 pointer-events-none">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gold via-transparent to-transparent"></div>
+        </div>
+        <div class="max-w-6xl mx-auto text-center relative z-10">
+            <span class="inline-block px-4 py-1 mb-4 rounded-full border border-gold/30 bg-gold/10 text-gold text-sm font-semibold tracking-widest uppercase">Gastronomy Science</span>
+            <h1 class="text-5xl md:text-7xl font-display font-extrabold mb-6 gradient-text tracking-tighter">炒飯的科學與藝術</h1>
+            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto font-light">從隋朝的惜物智慧，到現代物理力學的美味解析。</p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 md:px-8 space-y-24 pb-32">
+
+        <!-- Top Section: Infographic -->
+        <section id="infographic" class="scroll-mt-20">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="h-8 w-1 bg-gold"></div>
+                <h2 class="text-3xl font-display font-bold">資訊圖表 <span class="text-gray-500 font-light ml-2">Visualizing Data</span></h2>
+            </div>
+            <div class="media-container glow-hover border border-white/10">
+                <img src="https://opal.google/board/blobs/ce9104bf-ac46-4f21-b441-f5fe8313fd2a" alt="炒飯的科學與藝術 資訊圖表" class="w-full">
+            </div>
+        </section>
+
+        <!-- Summary Bento Grid -->
+        <section id="summary">
+            <div class="bento-grid">
+                <div class="glass-card p-8 lg:col-span-2 glow-hover">
+                    <h3 class="text-gold font-bold text-xl mb-4 flex items-center">
+                        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        歷史與文化
+                    </h3>
+                    <p class="text-gray-300 leading-relaxed">起源於中國隋朝，最初為解決剩飯問題。後隨貿易與華人移民傳播，展現高度在地適應性，演變為具全球視野的指標性料理。</p>
+                </div>
+                <div class="glass-card p-8 glow-hover">
+                    <h3 class="text-fire font-bold text-xl mb-4 flex items-center">
+                        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        科學原理
+                    </h3>
+                    <p class="text-gray-300 leading-relaxed text-sm">拋鍋物理頻率促使飯粒懸浮，引發梅納反應產生「鍋氣」；利用澱粉老化使口感粒粒分明。</p>
+                </div>
+                <div class="glass-card p-8 glow-hover">
+                    <h3 class="text-blue-400 font-bold text-xl mb-4 flex items-center">
+                        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                        全球變體
+                    </h3>
+                    <p class="text-gray-300 leading-relaxed text-sm">從日式 Chahan 到印尼 Nasi Goreng 與秘魯 Arroz Chaufa，呈現跨文化的食材融合與創新。</p>
+                </div>
+                <div class="glass-card p-8 lg:col-span-4 glow-hover bg-gradient-to-r from-white/5 to-transparent border-l-4 border-l-gold">
+                    <h3 class="text-green-400 font-bold text-xl mb-4 flex items-center">
+                        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        營養與食安
+                    </h3>
+                    <p class="text-gray-300">冷藏後的抗性澱粉有助於血糖調節，但需嚴防「炒飯綜合症」（蠟樣芽孢桿菌）與高溫產生的丙烯酰胺風險。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Center Section: Video and Audio -->
+        <section id="visuals" class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-display font-bold mb-4">烹飪藝術影像</h2>
+                <p class="text-gray-400">展示拋鍋動力學與鍋氣的視覺盛宴</p>
+            </div>
+            
+            <div class="space-y-8">
+                <div class="media-container aspect-video border border-white/20 bg-black group">
+                    <video src="https://opal.google/board/blobs/a2831c23-23ad-4b62-a125-f2f7fc695dd2" class="w-full h-full" controls loop muted autoplay></video>
+                    <div class="absolute bottom-4 left-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded text-xs text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                        Video: 拋鍋與物理動態展示
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 flex flex-col md:flex-row items-center gap-6">
+                    <div class="flex-shrink-0 bg-gold/20 p-4 rounded-full animate-pulse-slow">
+                        <svg class="w-8 h-8 text-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3V7.803l8-1.6V11.22a4.369 4.369 0 00-1 1.22c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3V3z"></path></svg>
+                    </div>
+                    <div class="flex-grow w-full">
+                        <p class="text-sm font-semibold text-gold mb-2 tracking-widest uppercase">背景音樂伴奏</p>
+                        <audio src="https://opal.google/board/blobs/f902a5fe-7063-4c42-8a6b-69e4df31ed69" controls class="w-full h-10 opacity-80"></audio>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom Section: Report Content -->
+        <section id="report" class="space-y-16">
+            <div class="section-divider"></div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Navigation Column (Desktop) -->
+                <div class="hidden lg:block lg:col-span-3 sticky top-10 h-fit space-y-4">
+                    <p class="text-xs font-bold text-gold/50 tracking-widest uppercase">章節導覽</p>
+                    <nav class="flex flex-col space-y-2 border-l border-white/10 pl-4">
+                        <a href="#h-1" class="text-gray-500 hover:text-gold transition-colors py-1 text-sm">一、歷史背景</a>
+                        <a href="#h-2" class="text-gray-500 hover:text-gold transition-colors py-1 text-sm">二、科學原理</a>
+                        <a href="#h-3" class="text-gray-500 hover:text-gold transition-colors py-1 text-sm">三、全球變體</a>
+                        <a href="#h-4" class="text-gray-500 hover:text-gold transition-colors py-1 text-sm">四、營養安全</a>
+                        <a href="#conclusion" class="text-gray-500 hover:text-gold transition-colors py-1 text-sm">結論</a>
+                    </nav>
+                </div>
+
+                <!-- Main Content Column -->
+                <div class="lg:col-span-9 space-y-16 text-gray-300 leading-loose text-lg">
+                    
+                    <article id="h-1" class="space-y-6">
+                        <h2 class="text-3xl font-display font-bold text-white border-b border-white/10 pb-4">一、 炒飯的歷史背景與文化起源</h2>
+                        <p>
+                            炒飯的歷史起源可追溯至中國隋朝（公元 581-618 年），其誕生初期主要是為避免浪費剩飯而發展出的惜物烹飪技巧。其核心概念為「熱鍋快速翻炒」，這項技術隨著絲綢之路的貿易往來，逐漸散播至亞洲各地。
+                        </p>
+                        <div class="bg-gold/5 border-l-2 border-gold p-6 rounded-r-xl italic text-gray-400">
+                            其中，起源於隋煬帝時期的「揚州炒飯」至今仍被視為中式炒飯的經典基準。隨著全球華人移民的遷移歷史，炒飯展現了極高的文化適應性，積極吸收了各國的在地食材，如東南亞地區的蝦醬與印度的香料，使炒飯從傳統中式餐點躍升為全球化的代表性美食。
+                        </div>
+                    </article>
+
+                    <article id="h-2" class="space-y-8">
+                        <h2 class="text-3xl font-display font-bold text-white border-b border-white/10 pb-4">二、 炒飯的科學原理：物理力學與化學變化</h2>
+                        
+                        <div class="space-y-4">
+                            <h3 class="text-xl font-bold text-fire">1. 鍋氣與梅納反應 (Maillard Reaction)</h3>
+                            <p>
+                                根據 2020 年的物理學研究，專業廚師翻炒的動作涉及約 5Hz 的頻率與雙關節運動，這使得飯粒能在超過 200°C 的極高溫下短暫懸浮。這種力學操作既不會讓飯粒燒焦，又能讓飯粒表面的氨基酸與還原糖在極高溫下發生<span class="text-white font-bold">梅納反應</span>，產生數百種風味化合物與褐色外觀，進而賦予炒飯獨特的焦香氣息，即俗稱的<span class="text-white font-bold">鍋氣 (Wok Hei)</span>。
+                            </p>
+                        </div>
+
+                        <div class="space-y-4">
+                            <h3 class="text-xl font-bold text-gold">2. 澱粉老化的科學依據</h3>
+                            <p>
+                                傳統炒飯極度強調使用「隔夜飯」。從科學角度分析，米飯在冷藏過程中會發生<span class="text-white font-bold">澱粉老化 (Starch Retrogradation)</span>。在此過程中，米飯內部的支鏈澱粉分子會重新排列，導致飯粒黏性降低、硬度增加。此化學轉變證實了使用隔夜飯的科學合理性，因為老化後的澱粉結構能讓米飯在下鍋炒製時更容易達到「粒粒分明」的完美質地。
+                            </p>
+                        </div>
+                    </article>
+
+                    <article id="h-3" class="space-y-8">
+                        <h2 class="text-3xl font-display font-bold text-white border-b border-white/10 pb-4">三、 全球主要炒飯種類</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="glass-card p-6 border-t-2 border-t-gold/50">
+                                <h4 class="font-bold text-white mb-2">東亞地區</h4>
+                                <p class="text-sm text-gray-400">中式揚州炒飯注重刀工；日式炒飯（Chahan）則採用圓糯米，質地黏潤。</p>
+                            </div>
+                            <div class="glass-card p-6 border-t-2 border-t-orange-400/50">
+                                <h4 class="font-bold text-white mb-2">東南亞地區</h4>
+                                <p class="text-sm text-gray-400">印尼 Nasi Goreng 以甜醬油與蝦醬為核心；泰式則慣用茉莉香米，佐以魚露與青檸。</p>
+                            </div>
+                            <div class="glass-card p-6 border-t-2 border-t-blue-400/50 md:col-span-2">
+                                <h4 class="font-bold text-white mb-2">美洲地區</h4>
+                                <p class="text-sm text-gray-400">秘魯的 Arroz Chaufa 深受 19 世紀中國移民影響，融合了秘魯當地的薑與大蔥，成為跨文化融合料理的典範。</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article id="h-4" class="space-y-8">
+                        <h2 class="text-3xl font-display font-bold text-white border-b border-white/10 pb-4">四、 營養價值與食品安全</h2>
+                        <div class="space-y-6">
+                            <div class="flex gap-6">
+                                <div class="hidden sm:block text-4xl font-black text-white/10">01</div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-green-400 mb-2">抗性澱粉與血糖控制</h3>
+                                    <p>經過冷藏再重新烹煮的炒飯會形成較多的<span class="text-white">抗性澱粉 (Resistant Starch)</span>。研究指出，這能微幅降低升糖指數 (GI)，對血糖控制相對有利；但高油脂含量仍是健康考量的重點。</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-6">
+                                <div class="hidden sm:block text-4xl font-black text-white/10">02</div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-red-400 mb-2">「炒飯綜合症」風險</h3>
+                                    <p>若熟飯室溫靜置過久，易滋生<span class="text-white">蠟樣芽孢桿菌</span>。其產生的耐熱毒素無法被高溫消滅。此外，極高溫下澱粉類可能生成微量<span class="text-white">丙烯酰胺</span>。精準控制火候與冷藏保存是必要措施。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article id="conclusion" class="p-10 bg-gradient-to-br from-gold/10 to-transparent rounded-3xl border border-gold/20">
+                        <h2 class="text-3xl font-display font-bold text-white mb-6">結論</h2>
+                        <p>
+                            炒飯是一道完美結合了歷史傳承、物理力學與食品化學的料理。從隋朝的惜物智慧到今日的全球化美食，炒飯的演變展現了深刻的文化包容性。掌握炒飯背後的科學知識，將有助於在提升風味的同時，兼顧營養與食品安全。
+                        </p>
+                    </article>
+
+                    <section id="references" class="pt-10">
+                        <h3 class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-6">引用文獻 References</h3>
+                        <ul class="text-xs space-y-3 text-gray-500 font-light italic list-disc pl-4">
+                            <li>Anderson, E. N. (2023). <i>The Food of China</i>. Yale University Press.</li>
+                            <li>Cultural Heritage Administration. (2021). <i>The Global Journey of Fried Rice</i>.</li>
+                            <li>Ko, H. Y., & Hu, D. L. (2020). "The physics of tossing fried rice." <i>Journal of the Royal Society Interface</i>.</li>
+                            <li>Wang, L., et al. (2022). "Influence of starch retrogradation on fried rice." <i>Food Chemistry</i>.</li>
+                            <li>Sarker, A., et al. (2021). <i>International Journal of Gastronomy and Food Science</i>.</li>
+                            <li>Reed, S., et al. (2022). <i>Journal of Food Protection</i>.</li>
+                            <li>Lin, X., et al. (2023). <i>LWT - Food Science and Technology</i>.</li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer / Signature -->
+        <div class="section-divider"></div>
+        <footer class="py-12 flex flex-col items-center justify-center text-center">
+            <div class="mb-2 text-gray-400 flex items-center gap-2">
+                <span class="h-px w-8 bg-white/20"></span>
+                <span>學號：M11401917</span>
+                <span class="h-px w-8 bg-white/20"></span>
+            </div>
+            <div class="text-xl font-medium tracking-tight">
+                【主題探索報告】by <span class="italic text-red-500 font-bold ml-1">Ryan</span>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Floating UI decoration -->
+    <div class="fixed top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold to-transparent opacity-50 z-50"></div>
+    
+    <script>
+        // Simple scroll reveal animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section, article').forEach(el => {
+            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
