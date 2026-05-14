@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>戰略局勢：川普 vs. 習近平 | 全球權力博弈全紀錄</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Noto+Sans+TC:wght@300;400;700&family=Black+Ops+One&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        military: {
+                            base: '#1a1d1a',
+                            surface: '#2d332d',
+                            accent: '#c5a059', // Brass/Gold
+                            hazard: '#ff4d00',
+                            olive: '#4b5320',
+                            slate: '#353b3c'
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Orbitron', 'sans-serif'],
+                        body: ['Noto Sans TC', 'sans-serif'],
+                        stencil: ['Black Ops One', 'cursive']
+                    },
+                    backgroundImage: {
+                        'grid-pattern': "radial-gradient(circle, #3a3a3a 1px, transparent 1px)",
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0f1110;
+            color: #e0e0e0;
+            background-image: radial-gradient(circle at 2px 2px, #222 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+        .glass-panel {
+            background: rgba(45, 51, 45, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+        }
+        .military-border {
+            position: relative;
+            border-left: 4px solid #c5a059;
+        }
+        .hazard-stripe {
+            background: repeating-linear-gradient(
+                45deg,
+                #c5a059,
+                #c5a059 10px,
+                #1a1d1a 10px,
+                #1a1d1a 20px
+            );
+        }
+        .scanline {
+            width: 100%;
+            height: 2px;
+            background: rgba(197, 160, 89, 0.1);
+            position: absolute;
+            animation: scan 4s linear infinite;
+        }
+        @keyframes scan {
+            0% { top: 0; }
+            100% { top: 100%; }
+        }
+        .reveal-text {
+            border-right: 2px solid #c5a059;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 3s steps(40, end), blink .75s step-end infinite;
+        }
+        @keyframes typing { from { width: 0 } to { width: 100% } }
+        @keyframes blink { from, to { border-color: transparent } 50% { border-color: #c5a059 } }
+    </style>
+</head>
+<body class="font-body selection:bg-military-accent selection:text-military-base">
+
+    <!-- Header / Banner Section -->
+    <header class="relative min-h-[70vh] flex flex-col items-center justify-center overflow-hidden border-b-4 border-military-accent">
+        <div class="absolute inset-0 z-0">
+            <img src='https://opal.google/board/blobs/00228121-3985-4df8-a28d-354887d6248b' alt='Trump vs Xi Strategic Banner' class="w-full h-full object-cover grayscale contrast-125 opacity-40 scale-105 hover:scale-100 transition-transform duration-10000" />
+            <div class="absolute inset-0 bg-gradient-to-t from-military-base via-transparent to-military-base/80"></div>
+            <div class="scanline"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-4 max-w-5xl">
+            <div class="inline-block px-3 py-1 mb-4 border border-military-accent text-military-accent font-display text-xs tracking-widest uppercase bg-black/50">
+                Strategic Intelligence Report // ID: M11401917
+            </div>
+            <h1 class="font-stencil text-4xl md:text-7xl lg:text-8xl text-white mb-6 drop-shadow-[0_0_15px_rgba(197,160,89,0.5)] tracking-tighter leading-none">
+                川普 <span class="text-military-accent">VS.</span> 習近平
+            </h1>
+            <p class="font-display text-lg md:text-2xl text-gray-300 tracking-wide uppercase max-w-3xl mx-auto border-y border-white/10 py-4">
+                當「交易之王」遇上「大國教頭」：全球矚目權力對決
+            </p>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6 text-military-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-16">
+        
+        <!-- Introduction Grid -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-24">
+            <div class="lg:col-span-8 glass-panel p-8 md:p-12 military-border">
+                <h2 class="font-stencil text-2xl text-military-accent mb-6 flex items-center">
+                    <span class="w-8 h-[2px] bg-military-accent mr-3"></span>
+                    I. 前言：狂人與教頭的博弈
+                </h2>
+                <div class="space-y-6 text-lg leading-relaxed text-gray-200">
+                    <p>
+                        想像一下，舞台的一邊是寫過《交易的藝術》、凡事看重損益表的美國地產大亨川普；另一邊則是強調「中華民族偉大復興」、性格沉穩且意志堅定的領導人習近平。這兩位重量級人物坐下來吃飯，談的可不是什麼午餐菜色，而是牽動全球數十億人命運的權力博弈。
+                    </p>
+                    <p class="bg-military-accent/10 p-4 border-l-2 border-military-accent italic">
+                        「川習會」不僅僅是兩國元首的見面，更是一場政治實力與談判技巧的極限拉扯。今天，就讓我們撥開外交辭令的迷霧，帶你進入這段充滿戲劇張力的時光隧道。
+                    </p>
+                </div>
+            </div>
+            <div class="lg:col-span-4 flex flex-col justify-between space-y-6">
+                <div class="bg-military-surface p-6 border-r-4 border-military-hazard">
+                    <div class="text-xs font-display text-military-hazard mb-2">STATUS: CRITICAL</div>
+                    <div class="text-xl font-bold uppercase">全球權力版圖重組</div>
+                </div>
+                <div class="bg-military-slate p-6 border-b-4 border-white/20">
+                    <div class="text-sm text-gray-400 mb-4 font-display">Student Reference</div>
+                    <div class="text-3xl font-stencil text-white">M11401917</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bento Grid: Key Meetings -->
+        <section class="mb-24">
+            <div class="flex items-end justify-between mb-8">
+                <h2 class="font-stencil text-3xl text-white tracking-tighter">II. 巧克力蛋糕外交 <span class="text-military-accent">/ 歷史節點</span></h2>
+                <div class="hazard-stripe h-4 w-32 hidden md:block"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="glass-panel p-6 border-t-4 border-military-accent group hover:bg-military-accent transition-all duration-500">
+                    <div class="text-military-accent group-hover:text-military-base font-display text-sm mb-4">2017.04 // MAR-A-LAGO</div>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-military-base">海湖莊園的初見面</h3>
+                    <p class="text-gray-400 group-hover:text-military-base/80 text-sm leading-relaxed">
+                        在享用最精緻的巧克力蛋糕時，告知向敘利亞發射導彈。這種「商人式」震撼外交，開啟了兩人複雜的個人友誼。
+                    </p>
+                </div>
+                <!-- Card 2 -->
+                <div class="glass-panel p-6 border-t-4 border-white group hover:bg-white transition-all duration-500">
+                    <div class="text-gray-400 group-hover:text-military-base font-display text-sm mb-4">2017.11 // FORBIDDEN CITY</div>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-military-base">紫禁城的超規格接待</h3>
+                    <p class="text-gray-400 group-hover:text-military-base/80 text-sm leading-relaxed">
+                        故宮漫步與寶蘊樓品茗。中方試圖以文化底蘊「軟化」商人，隱含著維持表面和諧的戰略苦心。
+                    </p>
+                </div>
+                <!-- Card 3 -->
+                <div class="glass-panel p-6 border-t-4 border-military-hazard group hover:bg-military-hazard transition-all duration-500">
+                    <div class="text-military-hazard group-hover:text-military-base font-display text-sm mb-4">2018-2019 // G20 SUMMIT</div>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-military-base">貿易戰的「中場休息」</h3>
+                    <p class="text-gray-400 group-hover:text-military-base/80 text-sm leading-relaxed">
+                        布宜諾斯艾利斯與大阪。每一次飯局都決定了關稅的命運，全世界股市隨著兩位巨頭的席位上下震盪。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Layout: Shift in Relations -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-24 items-center">
+            <div class="order-2 lg:order-1">
+                <h2 class="font-stencil text-3xl text-military-accent mb-8">III. 感情變調的導火線</h2>
+                <div class="space-y-6 text-gray-300">
+                    <p class="leading-relaxed">
+                        俗話說「分手不總是因為不再愛了」，在國際關係中，分手往往是因為利益分配不均。中美關係在川普時期經歷了自 1979 年建交以來最大的轉型。
+                    </p>
+                    <div class="relative pl-8 border-l border-white/20 py-4">
+                        <div class="absolute -left-[5px] top-0 w-2 h-2 bg-military-accent rounded-full"></div>
+                        <h4 class="text-white font-bold mb-2">從「接觸」到「競爭」</h4>
+                        <p class="text-sm">推翻了過去認為中國會逐漸西方化的邏輯，正式將其定位為「戰略競爭對手」。</p>
+                    </div>
+                    <div class="relative pl-8 border-l border-white/20 py-4">
+                        <div class="absolute -left-[5px] top-0 w-2 h-2 bg-military-hazard rounded-full"></div>
+                        <h4 class="text-white font-bold mb-2">全方位對抗新常態</h4>
+                        <p class="text-sm">史無前例的貿易戰、針對華為與半導體的科技封鎖。這不再只是買賣，而是強權間的直球對決。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="order-1 lg:order-2 bg-military-surface/50 border border-white/10 p-4 rotate-1 lg:rotate-3 hover:rotate-0 transition-transform duration-500">
+                <div class="aspect-square bg-military-base flex flex-col items-center justify-center p-8 border-2 border-dashed border-military-accent">
+                    <div class="text-military-accent font-stencil text-6xl mb-4">VS</div>
+                    <div class="w-full h-1 bg-gradient-to-r from-transparent via-military-accent to-transparent my-4"></div>
+                    <div class="text-center">
+                        <div class="text-xs tracking-[0.3em] font-display text-gray-500 mb-2">STRATEGIC ANALYSIS</div>
+                        <div class="text-white font-bold tracking-widest uppercase">Great Power Rivalry</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tab-like section: Deep Dive -->
+        <section class="glass-panel p-8 md:p-12 mb-24 relative overflow-hidden">
+            <div class="absolute top-0 right-0 hazard-stripe w-32 h-2"></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="font-stencil text-3xl text-white mb-8 underline decoration-military-accent decoration-4 underline-offset-8">IV. 大咖心海底針</h2>
+                    <p class="text-gray-300 mb-6 italic">這到底是真交情，還是演一場戲？</p>
+                    <ul class="space-y-6">
+                        <li class="flex gap-4">
+                            <span class="text-military-accent font-display text-2xl">01</span>
+                            <div>
+                                <span class="block font-bold text-white uppercase tracking-wider mb-1">川普的「商人本色」</span>
+                                <span class="text-sm text-gray-400 leading-relaxed">外交是個人化且交易性的。誇讚對手往往是為了在談判桌上換取更好的條件。</span>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="text-military-accent font-display text-2xl">02</span>
+                            <div>
+                                <span class="block font-bold text-white uppercase tracking-wider mb-1">結構性的對抗</span>
+                                <span class="text-sm text-gray-400 leading-relaxed">兩大強權在意識形態、安全利益及全球領導權上的根本分歧，底部的碰撞是結構性矛盾。</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-military-base/50 p-6 border border-military-accent/30 rounded-lg">
+                    <h2 class="font-stencil text-2xl text-military-hazard mb-8">V. 辛辣話題區</h2>
+                    <div class="space-y-6">
+                        <div class="border-b border-white/5 pb-4">
+                            <h4 class="font-bold text-white mb-2">台灣議題：標價的籌碼？</h4>
+                            <p class="text-sm text-gray-400">川普曾質疑保護盟友的成本，將地緣政治核心利益「籌碼化」，引發印太戰略穩定的隱憂。</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white mb-2">被邊緣化的人權</h4>
+                            <p class="text-sm text-gray-400">在「美國優先」原則下，川普對新疆、香港議題的關注時常顯得被動，甚至為了貿易協定保持沉默。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Future Scenarios -->
+        <section class="mb-24">
+            <h2 class="font-stencil text-4xl text-white text-center mb-16 tracking-widest">
+                <span class="text-military-accent">VI.</span> 未來預演：川普 2.0
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-military-accent blur-xl opacity-0 group-hover:opacity-20 transition-opacity"></div>
+                    <div class="relative bg-military-surface p-8 border border-white/10 h-full flex flex-col">
+                        <div class="w-12 h-12 bg-military-base border border-military-accent text-military-accent flex items-center justify-center font-display text-xl mb-6">01</div>
+                        <h3 class="text-xl font-bold text-white mb-4">極限施壓續集</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">傳聞中 60% 的全面關稅，與更徹底的供應鏈「去風險化」，將逼迫中美進入極限脫鉤時代。</p>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-military-accent blur-xl opacity-0 group-hover:opacity-20 transition-opacity"></div>
+                    <div class="relative bg-military-surface p-8 border border-white/10 h-full flex flex-col">
+                        <div class="w-12 h-12 bg-military-base border border-military-accent text-military-accent flex items-center justify-center font-display text-xl mb-6">02</div>
+                        <h3 class="text-xl font-bold text-white mb-4">「宏大交易」可能性</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">川普具備高度彈性，只要中方在經濟上給予足夠讓步，一場顛覆傳統邏輯的和解並非不可能。</p>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-military-accent blur-xl opacity-0 group-hover:opacity-20 transition-opacity"></div>
+                    <div class="relative bg-military-surface p-8 border border-white/10 h-full flex flex-col">
+                        <div class="w-12 h-12 bg-military-base border border-military-accent text-military-accent flex items-center justify-center font-display text-xl mb-6">03</div>
+                        <h3 class="text-xl font-bold text-white mb-4">紅線熱線不斷</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">在 AI 倫理、氣候變遷及軍事誤判議題上，首腦間的直接熱線將是防止競爭演變為衝突的最後保險。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="max-w-4xl mx-auto text-center mb-16">
+            <div class="mb-12 inline-block">
+                <div class="flex items-center justify-center gap-4 text-military-accent font-stencil text-2xl uppercase tracking-[0.5em]">
+                    Final Report // Conclusion
+                </div>
+                <div class="h-[2px] bg-gradient-to-r from-transparent via-military-accent to-transparent mt-4"></div>
+            </div>
+            <p class="text-2xl text-gray-200 leading-relaxed font-light mb-8">
+                中美關係已不再是單純的黑與白，而是一場高難度的「權力遊戲」。從海湖莊園的蛋糕到貿易戰的煙硝，這段歷史告訴我們，首腦外交雖然具備控管危機的「煞車」作用，但無法根治大國競爭的病灶。
+            </p>
+            <p class="text-gray-400 mb-12">
+                我們正處在一個充滿不確定性的時代。中美兩位巨頭的每一次握手或轉身，都將重新定義未來的全球地緣政治。
+            </p>
+
+            <!-- Interaction Box -->
+            <div class="bg-black border-2 border-military-accent p-10 relative overflow-hidden">
+                <div class="absolute top-0 left-0 hazard-stripe w-full h-1"></div>
+                <h3 class="font-stencil text-2xl text-white mb-6 uppercase tracking-wider">互動戰略室</h3>
+                <p class="text-military-accent mb-8 font-bold">你覺得如果川普跟習近平再次見面，第一句話會說什麼？</p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center">
+                    <button class="bg-military-accent text-military-base font-bold px-8 py-3 uppercase tracking-tighter hover:bg-white transition-colors">
+                        「好久不見，老朋友」
+                    </button>
+                    <button class="border border-military-accent text-military-accent font-bold px-8 py-3 uppercase tracking-tighter hover:bg-military-accent hover:text-military-base transition-colors">
+                        「這份訂單你打算簽了嗎？」
+                    </button>
+                </div>
+                <div class="mt-8">
+                    <textarea class="w-full bg-military-surface border border-white/20 p-4 text-white focus:outline-none focus:border-military-accent" rows="3" placeholder="在下方留下您的戰略看法..."></textarea>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // Simple scroll reveal or interactive animations can be added here
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('click', function() {
+                alert('數據已記錄。感謝您的戰略回饋。');
+            });
+        });
+    </script>
+</body>
+</html>
+
